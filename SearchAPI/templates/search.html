@@ -1,0 +1,85 @@
+<!-- CarSearch/templates/SearchAPI/search.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Search</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set font family */
+            color: #343a40; /* Dark text color */
+        }
+        .navbar {
+            background-color: #ffffff; /* White navbar background */
+        }
+        .navbar-brand {
+            color: #007bff; /* Blue navbar brand color */
+        }
+        .nav-link {
+            color: #343a40 !important; /* Dark nav link color */
+        }
+        .container {
+            margin-top: 50px; /* Add top margin for spacing */
+        }
+        h1 {
+            color: #007bff; /* Blue header color */
+            margin-bottom: 30px; /* Add spacing below header */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Add spacing between form group */
+        }
+        .btn {
+            background-color: #007bff; /* Blue button background color */
+            border-color: #007bff; /* Blue button border color */
+        }
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker border color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">CarSearch</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Search for a Car</h1>
+    <form action="{% url 'search_car' %}" method="get">
+        <div class="form-group">
+            <label for="car_id">Enter Car Name:</label>
+            <input type="text" class="form-control" id="car_id" name="car_id" placeholder="Enter Car ID">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
